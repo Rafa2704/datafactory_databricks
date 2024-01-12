@@ -52,7 +52,7 @@ display(camada_silver)
 
 # COMMAND ----------
 
-# e salve-o em formato Delta na pasta especificada
+# Salvando em formato Delta na pasta especificada
 salvando_silver = "dbfs:/mnt/imoveis/Silver/dados_tratado"
 camada_silver.write.format("delta").mode("overwrite").save(salvando_silver)
 
