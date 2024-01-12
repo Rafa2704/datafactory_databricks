@@ -20,7 +20,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Repos/1468042@sga.pucminas.br/datafactory_databricks/notebooks/Silver_to_Gold"
+				},
+				"linkedServiceName": {
+					"referenceName": "databricks_to_datafactory",
+					"type": "LinkedServiceReference"
+				}
 			},
 			{
 				"name": "ingestao-camada-bromze",
@@ -33,7 +40,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Repos/1468042@sga.pucminas.br/datafactory_databricks/notebooks/Raw_to_Silver"
+				},
+				"linkedServiceName": {
+					"referenceName": "databricks_to_datafactory",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
