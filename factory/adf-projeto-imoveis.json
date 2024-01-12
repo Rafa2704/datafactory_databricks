@@ -1,0 +1,9 @@
+{
+	"name": "adf-projeto-imoveis",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b13117d4-2fb1-49e6-a788-12a63db97092",
+		"tenantId": "14cbd5a7-ec94-46ba-b314-cc0fc972a161"
+	}
+}
