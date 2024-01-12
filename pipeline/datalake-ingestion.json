@@ -7,7 +7,7 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "ingestao-camada-bromze",
+						"activity": "ingestao-camada-bronze",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -30,7 +30,7 @@
 				}
 			},
 			{
-				"name": "ingestao-camada-bromze",
+				"name": "ingestao-camada-bronze",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
