@@ -1,6 +1,41 @@
 {
 	"name": "datalake-ingestion",
 	"properties": {
+		"activities": [
+			{
+				"name": "ingestao-camada-gold",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ingestao-camada-bromze",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			},
+			{
+				"name": "ingestao-camada-bromze",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
 		"annotations": []
 	}
 }
